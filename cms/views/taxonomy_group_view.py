@@ -1,13 +1,13 @@
-from cms.models import PostType
+from cms.models import TaxonomyGroup
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 from rest_framework import filters
 
-from cms.serializers import PostTypeSerializer
+from cms.serializers import TaxonomyGroupSerializer
 
-class PostTypeView(ModelViewSet):
-    queryset = PostType.objects.all()
-    serializer_class = PostTypeSerializer
+class TaxonomyGroupView(ModelViewSet):
+    queryset = TaxonomyGroup.objects.all()
+    serializer_class = TaxonomyGroupSerializer
     permission_classes = [IsAuthenticated]
     filter_backends = [filters.SearchFilter]
     search_fields = ['name']

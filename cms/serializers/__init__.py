@@ -1,1 +1,2 @@
 from .post_type_serializer import PostTypeSerializer
+from .taxonomy_group_serializer import TaxonomyGroupSerializer
