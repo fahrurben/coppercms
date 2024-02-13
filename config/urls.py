@@ -21,11 +21,12 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
-from cms.views import PostTypeView, TaxonomyGroupView, TaxonomyView
+from cms.views import PostTypeView, TaxonomyGroupView, TaxonomyView, PostView
 router = routers.SimpleRouter()
 router.register(r'post_types', PostTypeView)
 router.register(r'taxonomy_groups', TaxonomyGroupView)
 router.register(r'taxonomy', TaxonomyView)
+router.register(r'posts', PostView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -25,7 +25,7 @@ class TaxonomySerializer(serializers.ModelSerializer):
             )
         ]
 
-        def save(self, *args, **kwargs):  # new
-            if not 'slug' in self.validated_data:
-                kwargs['slug'] = slugify(self.validated_data['name'])
-            return super().save(*args, **kwargs)
+    def save(self, *args, **kwargs):  # new
+        if not 'slug' in self.validated_data:
+            kwargs['slug'] = slugify(self.validated_data['name'])
+        return super().save(*args, **kwargs)

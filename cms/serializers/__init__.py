@@ -1,3 +1,4 @@
 from .post_type_serializer import PostTypeSerializer
 from .taxonomy_group_serializer import TaxonomyGroupSerializer
 from .taxonomy_serializer import TaxonomySerializer
+from .post_serializer import PostSerializer
